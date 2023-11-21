@@ -59,4 +59,15 @@ public class Writer {
     public void setStatus(PostStatus status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Writer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", posts=" + posts +
+                ", status=" + status +
+                '}';
+    }
 }

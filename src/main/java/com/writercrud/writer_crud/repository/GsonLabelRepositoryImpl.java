@@ -2,42 +2,107 @@ package com.writercrud.writer_crud.repository;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 import com.writercrud.writer_crud.model.Label;
+import com.writercrud.writer_crud.model.PostStatus;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class GsonLabelRepositoryImpl implements LabelRepository {
 
-    private Gson gson;
+    private final String jsonFilePath;
 
-    public GsonLabelRepositoryImpl() {
-        gson = new GsonBuilder().setPrettyPrinting().create();
+    public GsonLabelRepositoryImpl(String jsonFilePath) {
+        this.jsonFilePath = jsonFilePath;
     }
 
+
+    @Override
     public Label getById(Integer id) {
-        return null;
-    }
-
-    public List<Label> getAll() {
-        return null;
-    }
-
-    public Label save(Label label) {
-        try (FileWriter writer = new FileWriter("src/main/resources/data/labels.json")){
-            gson.toJson(label, writer);
-        } catch (IOException e) {
-            e.printStackTrace();
+        List<Label> labels = getAll();
+        if (labels != null) {
+            for (Label label : labels) {
+                if (id.equals(label.getId())) {
+                    return label;
+                }
+            }
         }
+        return null; // Label with the given id not found
+    }
+
+    @Override
+    public List<Label> getAll() {
+        try (FileReader reader = new FileReader(jsonFilePath)) {
+            Gson gson = new Gson();
+            Type listType = new TypeToken<List<Label>>() {
+            }.getType();
+
+            // Deserialize the JSON file into a List<Label>
+            return gson.fromJson(reader, listType);
+        } catch (IOException e) {
+            e.printStackTrace();  // Handle the exception according to your needs
+            return new ArrayList<>();
+        }
+    }
+
+    @Override
+    public Label save(Label label) {
+
+        List<Label> labels = getAll();
+        if (labels == null) {
+            labels = new ArrayList<>();
+            label.setId(1);
+        } else {
+            int lastLabelId = labels.get(labels.size() - 1).getId();
+            label.setId(lastLabelId + 1);
+        }
+
+        labels.add(label);
+        saveAll(labels);
+
         return label;
     }
 
+    @Override
     public Label update(Label label) {
+
+        List<Label> labels = getAll();
+
+        if (labels != null) {
+            for (int i = 0; i < labels.size(); i++) {
+                if (labels.get(i).getId() == label.getId()) {
+                    labels.set(i, label);
+
+                    saveAll(labels);
+
+                    return label;
+                }
+            }
+        }
+
         return null;
     }
 
+    @Override
     public void deleteById(Integer id) {
+        Label label = getById(id);
+        label.setStatus(PostStatus.DELETED);
 
+        update(label);
+    }
+
+    private void saveAll(List<Label> labels) {
+        try (FileWriter writer = new FileWriter(jsonFilePath)) {
+            Gson gson = new Gson();
+            gson.toJson(labels, writer);
+        } catch (IOException e) {
+            e.printStackTrace();  // Handle the exception according to your needs
+        }
     }
 }

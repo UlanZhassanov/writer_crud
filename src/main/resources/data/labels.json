@@ -1,5 +1,1 @@
-{
-  "id": 1,
-  "name": "asd",
-  "status": "ACTIVE"
-}
+[{"id":1,"name":"o","status":"ACTIVE"},{"id":2,"name":"ggg","status":"ACTIVE"},{"id":3,"name":"Yes","status":"DELETED"}]

@@ -8,6 +8,11 @@ public class Label {
     public Label() {
     }
 
+    public Label(String name, PostStatus status) {
+        this.name = name;
+        this.status = status;
+    }
+
     public Label(int id, String name, PostStatus status) {
         this.id = id;
         this.name = name;
@@ -36,5 +41,14 @@ public class Label {
 
     public void setStatus(PostStatus status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Label{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", status=" + status +
+                '}';
     }
 }
