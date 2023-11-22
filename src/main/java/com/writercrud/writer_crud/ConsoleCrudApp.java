@@ -4,6 +4,7 @@ import com.writercrud.writer_crud.controller.LabelController;
 import com.writercrud.writer_crud.model.Label;
 import com.writercrud.writer_crud.model.PostStatus;
 import com.writercrud.writer_crud.view.LabelView;
+import com.writercrud.writer_crud.view.PostView;
 
 import java.util.Scanner;
 
@@ -20,11 +21,16 @@ public class ConsoleCrudApp {
 
             int mainChoice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline character
+            System.out.println();
 
             switch (mainChoice) {
                 case 1:
                     LabelView labelView = new LabelView();
                     labelView.labelOperations();
+                    break;
+                case 2:
+                    PostView postView = new PostView();
+                    postView.postOperations();
                     break;
                 case 0:
                     System.out.println("Exiting the application. Goodbye!");
@@ -32,6 +38,7 @@ public class ConsoleCrudApp {
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
+                    System.out.println();
             }
 
         }

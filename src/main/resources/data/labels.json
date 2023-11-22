@@ -1,1 +1,17 @@
-[{"id":1,"name":"o","status":"ACTIVE"},{"id":2,"name":"ggg","status":"ACTIVE"},{"id":3,"name":"Yes","status":"DELETED"}]
+[
+  {
+    "id": 1,
+    "name": "o",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 2,
+    "name": "GGG",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 3,
+    "name": "Yes",
+    "status": "DELETED"
+  }
+]

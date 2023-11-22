@@ -40,8 +40,7 @@ public class GsonLabelRepositoryImpl implements LabelRepository {
     public List<Label> getAll() {
         try (FileReader reader = new FileReader(jsonFilePath)) {
             Gson gson = new Gson();
-            Type listType = new TypeToken<List<Label>>() {
-            }.getType();
+            Type listType = new TypeToken<List<Label>>(){}.getType();
 
             // Deserialize the JSON file into a List<Label>
             return gson.fromJson(reader, listType);
@@ -99,7 +98,7 @@ public class GsonLabelRepositoryImpl implements LabelRepository {
 
     private void saveAll(List<Label> labels) {
         try (FileWriter writer = new FileWriter(jsonFilePath)) {
-            Gson gson = new Gson();
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
             gson.toJson(labels, writer);
         } catch (IOException e) {
             e.printStackTrace();  // Handle the exception according to your needs

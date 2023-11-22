@@ -23,6 +23,7 @@ public class LabelView {
 
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline character
+            System.out.println();
 
             switch (choice) {
                 case 1:
@@ -31,10 +32,12 @@ public class LabelView {
                     Label label = new Label(name, PostStatus.ACTIVE);
                     labelController.saveLabel(label);
                     System.out.println("Label saved to json file");
+                    System.out.println();
                     break;
                 case 2:
                     System.out.println("All labels:");
                     System.out.println(labelController.getAllLabels());
+                    System.out.println();
                     break;
                 case 3:
                     System.out.print("Enter id to find: ");
@@ -43,6 +46,7 @@ public class LabelView {
 
                     System.out.println("Label with id " + id + ":");
                     System.out.println(labelController.getLabelById(id));
+                    System.out.println();
                     break;
                 case 4:
                     System.out.print("Enter id to update: ");
@@ -56,6 +60,7 @@ public class LabelView {
 
                     System.out.println("Updated label " + labelUpdateId + ":");
                     System.out.println(labelController.updateLabel(labelUpdate));
+                    System.out.println();
                     break;
                 case 5:
                     System.out.print("Enter id to delete: ");
@@ -63,12 +68,14 @@ public class LabelView {
                     scanner.nextLine();
                     labelController.deleteLabel(labelDeleteId);
                     System.out.println("Label deleted");
+                    System.out.println();
                     break;
                 case 0:
                     System.out.println("Exiting the application. Goodbye!");
                     return;
                 default:
                     System.out.println("Invalid choice. Please try again.");
+                    System.out.println();
             }
         }
     }

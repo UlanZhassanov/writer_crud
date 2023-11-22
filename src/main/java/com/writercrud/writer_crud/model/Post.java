@@ -1,19 +1,28 @@
 package com.writercrud.writer_crud.model;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class Post {
     private int id;
     private String content;
-    private String created;
-    private String updated;
+    private LocalDateTime created;
+    private LocalDateTime  updated;
     private List<Label> labels;
     private PostStatus status;
 
     public Post() {
     }
 
-    public Post(int id, String content, String created, String updated, List<Label> labels, PostStatus status) {
+    public Post(String content, LocalDateTime created, LocalDateTime updated, List<Label> labels, PostStatus status) {
+        this.content = content;
+        this.created = created;
+        this.updated = updated;
+        this.labels = labels;
+        this.status = status;
+    }
+
+    public Post(int id, String content, LocalDateTime created, LocalDateTime updated, List<Label> labels, PostStatus status) {
         this.id = id;
         this.content = content;
         this.created = created;
@@ -38,19 +47,19 @@ public class Post {
         this.content = content;
     }
 
-    public String getCreated() {
+    public LocalDateTime getCreated() {
         return created;
     }
 
-    public void setCreated(String created) {
+    public void setCreated(LocalDateTime created) {
         this.created = created;
     }
 
-    public String getUpdated() {
+    public LocalDateTime getUpdated() {
         return updated;
     }
 
-    public void setUpdated(String updated) {
+    public void setUpdated(LocalDateTime updated) {
         this.updated = updated;
     }
 
