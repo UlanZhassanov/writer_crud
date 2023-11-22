@@ -12,6 +12,13 @@ public class Writer {
     public Writer() {
     }
 
+    public Writer(String firstName, String lastName, List<Post> posts, PostStatus status) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.posts = posts;
+        this.status = status;
+    }
+
     public Writer(int id, String firstName, String lastName, List<Post> posts, PostStatus status) {
         this.id = id;
         this.firstName = firstName;

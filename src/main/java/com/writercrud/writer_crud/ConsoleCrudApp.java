@@ -5,6 +5,7 @@ import com.writercrud.writer_crud.model.Label;
 import com.writercrud.writer_crud.model.PostStatus;
 import com.writercrud.writer_crud.view.LabelView;
 import com.writercrud.writer_crud.view.PostView;
+import com.writercrud.writer_crud.view.WriterView;
 
 import java.util.Scanner;
 
@@ -31,6 +32,10 @@ public class ConsoleCrudApp {
                 case 2:
                     PostView postView = new PostView();
                     postView.postOperations();
+                    break;
+                case 3:
+                    WriterView writerView = new WriterView();
+                    writerView.writerOperations();
                     break;
                 case 0:
                     System.out.println("Exiting the application. Goodbye!");

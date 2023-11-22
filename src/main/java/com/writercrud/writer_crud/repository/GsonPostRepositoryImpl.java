@@ -54,7 +54,6 @@ public class GsonPostRepositoryImpl implements PostRepository {
 
     @Override
     public Post save(Post post) {
-
         List<Post> postList = getAll();
 
         if (postList == null) {
@@ -73,7 +72,6 @@ public class GsonPostRepositoryImpl implements PostRepository {
 
     @Override
     public Post update(Post post) {
-
         List<Post> allPosts = getAll();
 
         if (allPosts != null) {

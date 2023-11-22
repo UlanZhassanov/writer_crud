@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "firstName": "Badou",
+    "lastName": "Jack",
+    "posts": [
+      {
+        "id": 1,
+        "content": "Thats what im talking about, maan. For real, bro",
+        "created": {
+          "date": {
+            "year": 2023,
+            "month": 11,
+            "day": 22
+          },
+          "time": {
+            "hour": 14,
+            "minute": 48,
+            "second": 58,
+            "nano": 264000000
+          }
+        },
+        "updated": {
+          "date": {
+            "year": 2023,
+            "month": 11,
+            "day": 22
+          },
+          "time": {
+            "hour": 16,
+            "minute": 22,
+            "second": 8,
+            "nano": 375000000
+          }
+        },
+        "labels": [
+          {
+            "id": 2,
+            "name": "GGG",
+            "status": "ACTIVE"
+          },
+          {
+            "id": 3,
+            "name": "Yes",
+            "status": "DELETED"
+          }
+        ],
+        "status": "ACTIVE"
+      },
+      {
+        "id": 2,
+        "content": "whot the heeeel, oumagaad",
+        "created": {
+          "date": {
+            "year": 2023,
+            "month": 11,
+            "day": 22
+          },
+          "time": {
+            "hour": 15,
+            "minute": 33,
+            "second": 33,
+            "nano": 0
+          }
+        },
+        "updated": {
+          "date": {
+            "year": 2023,
+            "month": 11,
+            "day": 22
+          },
+          "time": {
+            "hour": 16,
+            "minute": 59,
+            "second": 45,
+            "nano": 607000000
+          }
+        },
+        "labels": [
+          {
+            "id": 1,
+            "name": "o",
+            "status": "ACTIVE"
+          }
+        ],
+        "status": "DELETED"
+      }
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": 2,
+    "firstName": "Abraham",
+    "lastName": "Linkoln",
+    "posts": [
+      {
+        "id": 1,
+        "content": "Thats what im talking about, maan. For real, bro",
+        "created": {
+          "date": {
+            "year": 2023,
+            "month": 11,
+            "day": 22
+          },
+          "time": {
+            "hour": 14,
+            "minute": 48,
+            "second": 58,
+            "nano": 264000000
+          }
+        },
+        "updated": {
+          "date": {
+            "year": 2023,
+            "month": 11,
+            "day": 22
+          },
+          "time": {
+            "hour": 16,
+            "minute": 22,
+            "second": 8,
+            "nano": 375000000
+          }
+        },
+        "labels": [
+          {
+            "id": 2,
+            "name": "GGG",
+            "status": "ACTIVE"
+          },
+          {
+            "id": 3,
+            "name": "Yes",
+            "status": "DELETED"
+          }
+        ],
+        "status": "ACTIVE"
+      }
+    ],
+    "status": "DELETED"
+  }
+]
