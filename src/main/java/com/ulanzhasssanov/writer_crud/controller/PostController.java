@@ -1,8 +1,8 @@
-package com.writercrud.writer_crud.controller;
+package com.ulanzhasssanov.writer_crud.controller;
 
-import com.writercrud.writer_crud.model.Post;
-import com.writercrud.writer_crud.repository.GsonPostRepositoryImpl;
-import com.writercrud.writer_crud.repository.PostRepository;
+import com.ulanzhasssanov.writer_crud.model.Post;
+import com.ulanzhasssanov.writer_crud.repository.gson.GsonPostRepositoryImpl;
+import com.ulanzhasssanov.writer_crud.repository.PostRepository;
 
 import java.util.List;
 

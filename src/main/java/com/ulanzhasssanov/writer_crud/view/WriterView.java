@@ -1,10 +1,10 @@
-package com.writercrud.writer_crud.view;
+package com.ulanzhasssanov.writer_crud.view;
 
-import com.writercrud.writer_crud.controller.PostController;
-import com.writercrud.writer_crud.controller.WriterController;
-import com.writercrud.writer_crud.model.Post;
-import com.writercrud.writer_crud.model.PostStatus;
-import com.writercrud.writer_crud.model.Writer;
+import com.ulanzhasssanov.writer_crud.controller.PostController;
+import com.ulanzhasssanov.writer_crud.controller.WriterController;
+import com.ulanzhasssanov.writer_crud.enums.Status;
+import com.ulanzhasssanov.writer_crud.model.Post;
+import com.ulanzhasssanov.writer_crud.model.Writer;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -44,7 +44,7 @@ public class WriterView {
 
                     List<Post> savePosts = getWriterPosts(posts);
 
-                    Writer writer = new Writer(firstName, lastName, savePosts, PostStatus.ACTIVE);
+                    Writer writer = new Writer(firstName, lastName, savePosts, Status.ACTIVE);
                     writerController.saveWriter(writer);
                     System.out.println("Writer saved to json file");
                     System.out.println();

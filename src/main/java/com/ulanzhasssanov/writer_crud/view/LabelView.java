@@ -1,8 +1,8 @@
-package com.writercrud.writer_crud.view;
+package com.ulanzhasssanov.writer_crud.view;
 
-import com.writercrud.writer_crud.controller.LabelController;
-import com.writercrud.writer_crud.model.Label;
-import com.writercrud.writer_crud.model.PostStatus;
+import com.ulanzhasssanov.writer_crud.controller.LabelController;
+import com.ulanzhasssanov.writer_crud.enums.Status;
+import com.ulanzhasssanov.writer_crud.model.Label;
 
 import java.util.Scanner;
 
@@ -29,7 +29,7 @@ public class LabelView {
                 case 1:
                     System.out.print("Enter name: ");
                     String name = scanner.nextLine();
-                    Label label = new Label(name, PostStatus.ACTIVE);
+                    Label label = new Label(name, Status.ACTIVE);
                     labelController.saveLabel(label);
                     System.out.println("Label saved to json file");
                     System.out.println();
@@ -56,7 +56,7 @@ public class LabelView {
 
                     System.out.print("Enter new name: ");
                     String labelUpdateName = scanner.nextLine();
-                    Label labelUpdate = new Label(labelUpdateId, labelUpdateName, PostStatus.ACTIVE);
+                    Label labelUpdate = new Label(labelUpdateId, labelUpdateName, Status.ACTIVE);
 
                     System.out.println("Updated label " + labelUpdateId + ":");
                     System.out.println(labelController.updateLabel(labelUpdate));

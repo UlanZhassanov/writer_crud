@@ -1,19 +1,21 @@
-package com.writercrud.writer_crud.model;
+package com.ulanzhasssanov.writer_crud.model;
+
+import com.ulanzhasssanov.writer_crud.enums.Status;
 
 public class Label {
     private int id;
     private String name;
-    private PostStatus status;
+    private Status status;
 
     public Label() {
     }
 
-    public Label(String name, PostStatus status) {
+    public Label(String name, Status status) {
         this.name = name;
         this.status = status;
     }
 
-    public Label(int id, String name, PostStatus status) {
+    public Label(int id, String name, Status status) {
         this.id = id;
         this.name = name;
         this.status = status;
@@ -35,11 +37,11 @@ public class Label {
         this.name = name;
     }
 
-    public PostStatus getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(PostStatus status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 

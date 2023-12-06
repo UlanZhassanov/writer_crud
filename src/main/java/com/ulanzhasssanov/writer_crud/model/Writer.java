@@ -1,4 +1,6 @@
-package com.writercrud.writer_crud.model;
+package com.ulanzhasssanov.writer_crud.model;
+
+import com.ulanzhasssanov.writer_crud.enums.Status;
 
 import java.util.List;
 
@@ -7,19 +9,19 @@ public class Writer {
     private String firstName;
     private String lastName;
     private List<Post> posts;
-    private PostStatus status;
+    private Status status;
 
     public Writer() {
     }
 
-    public Writer(String firstName, String lastName, List<Post> posts, PostStatus status) {
+    public Writer(String firstName, String lastName, List<Post> posts, Status status) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.posts = posts;
         this.status = status;
     }
 
-    public Writer(int id, String firstName, String lastName, List<Post> posts, PostStatus status) {
+    public Writer(int id, String firstName, String lastName, List<Post> posts, Status status) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -59,11 +61,11 @@ public class Writer {
         this.posts = posts;
     }
 
-    public PostStatus getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(PostStatus status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 

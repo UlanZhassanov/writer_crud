@@ -1,4 +1,6 @@
-package com.writercrud.writer_crud.model;
+package com.ulanzhasssanov.writer_crud.model;
+
+import com.ulanzhasssanov.writer_crud.enums.PostStatus;
 
 import java.time.LocalDateTime;
 import java.util.List;

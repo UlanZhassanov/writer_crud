@@ -1,4 +1,4 @@
-package com.writercrud.writer_crud.repository;
+package com.ulanzhasssanov.writer_crud.repository;
 
 import java.util.List;
 

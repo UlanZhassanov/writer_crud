@@ -1,8 +1,8 @@
-package com.writercrud.writer_crud.controller;
+package com.ulanzhasssanov.writer_crud.controller;
 
-import com.writercrud.writer_crud.model.Label;
-import com.writercrud.writer_crud.repository.GsonLabelRepositoryImpl;
-import com.writercrud.writer_crud.repository.LabelRepository;
+import com.ulanzhasssanov.writer_crud.model.Label;
+import com.ulanzhasssanov.writer_crud.repository.gson.GsonLabelRepositoryImpl;
+import com.ulanzhasssanov.writer_crud.repository.LabelRepository;
 
 import java.util.List;
 

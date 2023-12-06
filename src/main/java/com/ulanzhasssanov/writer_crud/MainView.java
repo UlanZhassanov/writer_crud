@@ -1,16 +1,13 @@
-package com.writercrud.writer_crud;
+package com.ulanzhasssanov.writer_crud;
 
-import com.writercrud.writer_crud.controller.LabelController;
-import com.writercrud.writer_crud.model.Label;
-import com.writercrud.writer_crud.model.PostStatus;
-import com.writercrud.writer_crud.view.LabelView;
-import com.writercrud.writer_crud.view.PostView;
-import com.writercrud.writer_crud.view.WriterView;
+import com.ulanzhasssanov.writer_crud.view.LabelView;
+import com.ulanzhasssanov.writer_crud.view.PostView;
+import com.ulanzhasssanov.writer_crud.view.WriterView;
 
 import java.util.Scanner;
 
-public class ConsoleCrudApp {
-    public static void main(String[] args) {
+public class MainView {
+    public void start(){
         Scanner scanner = new Scanner(System.in);
 
         while (true) {

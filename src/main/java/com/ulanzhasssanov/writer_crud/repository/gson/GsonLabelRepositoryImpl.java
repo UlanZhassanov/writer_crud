@@ -1,10 +1,11 @@
-package com.writercrud.writer_crud.repository;
+package com.ulanzhasssanov.writer_crud.repository.gson;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.writercrud.writer_crud.model.Label;
-import com.writercrud.writer_crud.model.PostStatus;
+import com.ulanzhasssanov.writer_crud.enums.Status;
+import com.ulanzhasssanov.writer_crud.model.Label;
+import com.ulanzhasssanov.writer_crud.repository.LabelRepository;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -12,7 +13,6 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class GsonLabelRepositoryImpl implements LabelRepository {
 
@@ -91,7 +91,7 @@ public class GsonLabelRepositoryImpl implements LabelRepository {
     @Override
     public void deleteById(Integer id) {
         Label label = getById(id);
-        label.setStatus(PostStatus.DELETED);
+        label.setStatus(Status.DELETED);
 
         update(label);
     }

@@ -1,17 +1,17 @@
-package com.writercrud.writer_crud.repository;
+package com.ulanzhasssanov.writer_crud.repository.gson;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.writercrud.writer_crud.model.PostStatus;
-import com.writercrud.writer_crud.model.Writer;
+import com.ulanzhasssanov.writer_crud.enums.Status;
+import com.ulanzhasssanov.writer_crud.model.Writer;
+import com.ulanzhasssanov.writer_crud.repository.WriterRepository;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -88,7 +88,7 @@ public class GsonWriterRepositoryImpl implements WriterRepository {
     @Override
     public void deleteById(Integer id) {
         Writer writer = getById(id);
-        writer.setStatus(PostStatus.DELETED);
+        writer.setStatus(Status.DELETED);
 
         update(writer);
     }

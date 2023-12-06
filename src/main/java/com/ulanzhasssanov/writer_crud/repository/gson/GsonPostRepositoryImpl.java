@@ -1,11 +1,11 @@
-package com.writercrud.writer_crud.repository;
+package com.ulanzhasssanov.writer_crud.repository.gson;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.writercrud.writer_crud.model.Label;
-import com.writercrud.writer_crud.model.Post;
-import com.writercrud.writer_crud.model.PostStatus;
+import com.ulanzhasssanov.writer_crud.model.Post;
+import com.ulanzhasssanov.writer_crud.enums.PostStatus;
+import com.ulanzhasssanov.writer_crud.repository.PostRepository;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

@@ -1,10 +1,10 @@
-package com.writercrud.writer_crud.view;
+package com.ulanzhasssanov.writer_crud.view;
 
-import com.writercrud.writer_crud.controller.LabelController;
-import com.writercrud.writer_crud.controller.PostController;
-import com.writercrud.writer_crud.model.Label;
-import com.writercrud.writer_crud.model.Post;
-import com.writercrud.writer_crud.model.PostStatus;
+import com.ulanzhasssanov.writer_crud.controller.LabelController;
+import com.ulanzhasssanov.writer_crud.controller.PostController;
+import com.ulanzhasssanov.writer_crud.model.Label;
+import com.ulanzhasssanov.writer_crud.model.Post;
+import com.ulanzhasssanov.writer_crud.enums.PostStatus;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
